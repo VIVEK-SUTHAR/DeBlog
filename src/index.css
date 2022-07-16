@@ -11,13 +11,14 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   /* background-image: linear-gradient(to top, rgb(187, 247, 208), rgb(134, 239, 172), rgb(59, 130, 246)) */
-  background: #000;
-  background-image: url("./Assets/BG1.png");
-  background-size: 100vw;
+  background: #fff;
+  /* background-image: url("./Assets/BG1.png"); */
+  /*background-size: 100vw;
   background-position-y: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  overflow: hidden;
+  */
+  /* overflow: hidden; */
 }
 
 ::-webkit-scrollbar {
