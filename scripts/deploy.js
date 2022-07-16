@@ -8,12 +8,30 @@ async function main() {
     const DeBlogContract = await Deblog.deploy();
 
     await DeBlogContract.deployed();
-
     console.log("Contract DeBlog", DeBlogContract.address);
-    const a = await DeBlogContract.getAllblogs();
+    await DeBlogContract.newBlog(
+        Math.floor(Math.random() * 10000000),
+        "Test blog",
+        "N/a",
+        "Tech",
+        "HUFHCGLHKGFCH"
+    )
+    await DeBlogContract.newBlog(
+        Math.floor(Math.random() * 10000000),
+        "VIVEK BLOG",
+        "na",
+        "Sports",
+        "Virat kohli"
+    )
     console.log("All blogs:");
+    const a = await DeBlogContract.getAllblogs();
     console.log(a);
-    console.log(a.length);
+    console.log(typeof (a));
+    for (const items of a) {
+        console.log("ID : " + items.blogId);
+        console.log("Title : " + items.blogTitle);
+        console.log("Content : " + items.blogContent);
+    }
 }
 
 // We recommend this pattern to be able to use async/await everywhere

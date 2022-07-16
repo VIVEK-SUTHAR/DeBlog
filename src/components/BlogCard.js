@@ -3,7 +3,7 @@ import useStore from "../Store/store";
 export default function BlogCard() {
   const store = useStore();
   const currentAccount = store.currentAccount.slice(38);
-  
+
   return (
     <>
       <div className='MusicCard w-4/5 h-72 bg-[#181818] flex flex-row items-center  justify-center rounded-md p-4 overflow-hidden hover:bg-[hsla(0,0%,100%,.1)] hover:transition-all hover:delay-75'>
@@ -17,7 +17,6 @@ export default function BlogCard() {
           <img className='rounded-xl self-end' aria-hidden="false" draggable="false" loading="lazy" src="https://i.scdn.co/image/ab67706f00000002d324d714e59faec1c968c219" data-testid="card-image" alt="" class="mMx2LUixlnN_Fu45JpFB SKJSok3LfyedjZjujmFt"></img>
         </div>
       </div>
-         
     </>
   )
 }
