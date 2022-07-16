@@ -2,7 +2,7 @@ import { Home, Search, SpotifyLogoFull, YLibrary } from "../Assets/Icons";
 
 function Sidebar() {
   return (
-    <div className="bg-[#181818] glass  min-h-screen w-72  text-[#ffffff]  ">
+    <div className="bg-[#181818] glass min-h-screen w-72 stop-0   text-[#ffffff]  ">
       <div className="title ">
         <div className="pl-8 py-8  SpotifyLogi">
           <SpotifyLogoFull />

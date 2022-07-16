@@ -5,7 +5,7 @@ export default function Navbar() {
   const currentAccount = store.currentAccount.slice(38);
   // currentAccount.slice(38)
   return (
-    <div className="bg-[#2a2a2a]  h-16 w-full px-8  ">
+    <div className="bg-[#2a2a2a]  h-16 w-full px-8 stickey top-0 ">
       <div className="flex items-center justify-between h-full text-neutral-400 text-base font-medium">
         <ul className="flex">
           <li>
@@ -28,12 +28,12 @@ export default function Navbar() {
           </li>
           <li className=" hover:text-white hover:scale-105">
             <a href="/" className=" ">
-              <span className="mx-4">Download</span>
+              <span className="mx-4"></span>
             </a>
           </li>
           <li className="hover:text-white hover:scale-105 ">
             <a href="/" className="  mr-8">
-              <span className="pl-4 border-l-2 mx-4">Upload</span>
+              <span className="pl-4 border-l-2 mx-4">Write your Blog</span>
             </a>
           </li>
           <button className="rounded-full bg-slate-100 hover:scale-105 px-8 py-3 text-black">

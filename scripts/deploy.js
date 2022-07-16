@@ -1,20 +1,26 @@
+// scripts/deploy.js
+
 const hre = require("hardhat");
 
 async function main() {
+    // We get the contract to deploy.
+    const Deblog = await hre.ethers.getContractFactory("DeBlog");
+    const DeBlogContract = await Deblog.deploy();
 
-    const Spotify = hre.ethers.ContractFactory("SpotifyWeb3");
-    const SpotifyCOntract = await Spotify.deploy();
-    await SpotifyCOntract.deployed();
+    await DeBlogContract.deployed();
 
-    console.log("Deployed to" + SpotifyCOntract.address);
+    console.log("Contract DeBlog", DeBlogContract.address);
+    const a = await DeBlogContract.getAllblogs();
+    console.log("All blogs:");
+    console.log(a);
+    console.log(a.length);
 }
 
-
-
+// We recommend this pattern to be able to use async/await everywhere
+// and properly handle errors.
 main()
-    .then(() => {
-        process.exit(0);
-    }).catch(err => {
-        console.log(err);
+    .then(() => process.exit(0))
+    .catch((error) => {
+        console.error(error);
         process.exit(1);
-    })
+    });
