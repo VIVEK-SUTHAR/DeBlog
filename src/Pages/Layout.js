@@ -1,7 +1,7 @@
 import {
     BrowserRouter as Router, Route, Routes
 } from "react-router-dom";
-import MusicPanel from "../components/MusicPanel";
+import SidePanel from "../components/SidePanel"
 import Sidebar from "../components/Sidebar";
 import BlogPage from "./BlogPage";
 const Layout = () => {
@@ -10,7 +10,7 @@ const Layout = () => {
             <Sidebar />
             <Router>
                 <Routes>
-                    <Route path='/' element={<MusicPanel />} />
+                    <Route path='/' element={<SidePanel />} />
                     <Route path='/blog/:id' element={<BlogPage />} />
                 </Routes>
             </Router>
