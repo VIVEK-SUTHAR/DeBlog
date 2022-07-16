@@ -3,7 +3,7 @@ import logo from "../Assets/DeBlog-logos_white.png"
 
 function Sidebar() {
   return (
-    <div className="bg-[#181818] glass min-h-screen w-72 stop-0   text-[#ffffff]  ">
+    <div className="bg-[#181818] min-h-screen w-72 stop-0   text-[#ffffff]  ">
       <div className="title ">
         <div className="-mt-20 -ml-4">
           <img src={logo} alt="" />

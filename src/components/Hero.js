@@ -28,7 +28,6 @@ const Hero = ({ connectWallet }) => {
                 </div>
                 <ul className="flex flex-row items-center justify-center transition-all ease-in-out duration-300 text-2xl">
                     <li className="mx-12 my-2 hover:-translate-y-1  font-semibold " >Home</li>
-                    <li className="mx-6 my-2 hover:-translate-y-1 font-semibold " >Listen</li>
                     <li className="mx-6 my-2 hover:-translate-y-1 font-semibold " >About Us</li>
                 </ul>
             </nav>
