@@ -1,7 +1,12 @@
+import confetti from "canvas-confetti";
+import { useEffect } from "react";
 import useStore from "../Store/store";
 
 export default function BlogCard({ blogdata, index }) {
   // console.log(blogdata);
+  useEffect(()=>{
+    
+  },[])
   const store = useStore();
   const currentAccount = store.currentAccount.slice(38);
   return (
