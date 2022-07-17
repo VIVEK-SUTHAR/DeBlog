@@ -12,16 +12,9 @@ async function main() {
     await DeBlogContract.newBlog(
         Math.floor(Math.random() * 10000000),
         "Test blog",
-        "N/a",
-        "Tech",
-        "HUFHCGLHKGFCH"
-    )
-    await DeBlogContract.newBlog(
-        Math.floor(Math.random() * 10000000),
-        "VIVEK BLOG",
-        "na",
-        "Sports",
-        "Virat kohli"
+        "THis is a test blog",
+        "VIVEK SUTHAR",
+        "TEST BLOG UPLOAD BYN VIVEK SUTHAR"
     )
     console.log("All blogs:");
     const a = await DeBlogContract.getAllblogs();
@@ -30,6 +23,8 @@ async function main() {
     for (const items of a) {
         console.log("ID : " + items.blogId);
         console.log("Title : " + items.blogTitle);
+        console.log("SUbtitle : " + items.subTitle);
+        console.log("AUTHOR : " + items.authorName);
         console.log("Content : " + items.blogContent);
     }
 }

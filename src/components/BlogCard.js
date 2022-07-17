@@ -14,7 +14,7 @@ export default function BlogCard() {
           <p className='text-xl my-4 w-5/6 text-base'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore maiores voluptas, eos iusto reprehenderit quae non sint est, voluptatem obcaecati hic excepturi? Distinctio aut corporis quisquam eos vel, eveniet consequuntur.</p>
         </div>
         <div className='w-40 h-40 rounded-xl '>
-          <img className='rounded-xl self-end' aria-hidden="false" draggable="false" loading="lazy" src="https://i.scdn.co/image/ab67706f00000002d324d714e59faec1c968c219" data-testid="card-image" alt="" class="mMx2LUixlnN_Fu45JpFB SKJSok3LfyedjZjujmFt"></img>
+          <img className='rounded-xl self-end mMx2LUixlnN_Fu45JpFB SKJSok3LfyedjZjujmFt' aria-hidden="false" draggable="false" loading="lazy" src="https://i.scdn.co/image/ab67706f00000002d324d714e59faec1c968c219" data-testid="card-image" alt=""></img>
         </div>
       </div>
     </>

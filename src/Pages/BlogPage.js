@@ -3,8 +3,8 @@ const BlogPage = () => {
     return (
 
         <div className="bg-[#ffffff] w-screen flex-1 overflow-y-scroll Scroll px-10">
-            <ProfileBar/>
-            <div className="mt-8">
+            <ProfileBar />
+            <div className="mt-8 border-2">
                 <h2 className="text-6xl font-bold">Marcus Aurelius on Socrates</h2>
                 <h3 className="text-4xl mt-8 font-semibold text-[#757575]">What the Stoic Emperor Learned from the Athenian Philosopher</h3>
                 <img src="https://miro.medium.com/max/1050/1*bcnuz2Lvk5pb51SWGE6BjA.png" className="mt-12 w-screen" alt="body-img" />
