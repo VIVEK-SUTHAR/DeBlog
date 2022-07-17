@@ -5,6 +5,7 @@ import ProfileBar from "../components/ProfileBar";
 import useStore from "../Store/store";
 import abi from "../utils/ABI.json";
 import { CONTRACT_ADDRESS } from "../utils/utils";
+import blogImg from "../Assets/blogBanner.jpg"
 const BlogPage = () => {
     const store = useStore();
     const { id } = useParams();
@@ -57,13 +58,15 @@ const BlogPage = () => {
                     Thanks For Your Tip
                 </div>
                 <div className="bg-[#ffffff] w-screen flex-1 overflow-y-scroll Scroll px-10">
+                    <div className="flex justify-between">
                     <button className="bg-red-100 px-4 py-2 rounded-lg mt-2 " onClick={() => window.history.back()}>Go Back</button>
                     <button className="bg-red-100 px-4 py-2 rounded-lg mt-2 " onClick={sendTip}>Tip The Writer</button>
+                    </div>
                     <ProfileBar detailBlogs={detailBlogs} id={id} />
                     <div className="mt-8">
                         <h2 className="text-6xl font-bold">{detailBlogs[id].blogTitle}</h2>
                         <h3 className="text-4xl mt-8 font-semibold text-[#757575]">{detailBlogs[id].subTitle}</h3>
-                        <img src="https://miro.medium.com/max/1050/1*bcnuz2Lvk5pb51SWGE6BjA.png" className="mt-12 w-screen" alt="body-img" />
+                        <img src={blogImg} className="mt-12 w-screen" alt="body-img" />
                         <div className="mt-8 text-xl">
                             <p>{detailBlogs[id].blogContent}</p>
                         </div>
