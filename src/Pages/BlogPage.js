@@ -1,11 +1,14 @@
-import ProfileBar from "../components/ProfileBar"
-const BlogPage = () => {
-    return (
+import { useParams } from "react-router-dom";
+import ProfileBar from "../components/ProfileBar";
 
+const BlogPage = () => {
+    const { id } = useParams();
+    return (
         <div className="bg-[#ffffff] w-screen flex-1 overflow-y-scroll Scroll px-10">
+            <button className="bg-red-100 px-4 py-2 rounded-lg mt-2 " onClick={() => window.history.back()}>Go Back</button>
             <ProfileBar />
             <div className="mt-8 border-2">
-                <h2 className="text-6xl font-bold">Marcus Aurelius on Socrates</h2>
+                <h2 className="text-6xl font-bold">{id} Marcus Aurelius on Socrates</h2>
                 <h3 className="text-4xl mt-8 font-semibold text-[#757575]">What the Stoic Emperor Learned from the Athenian Philosopher</h3>
                 <img src="https://miro.medium.com/max/1050/1*bcnuz2Lvk5pb51SWGE6BjA.png" className="mt-12 w-screen" alt="body-img" />
                 <div className="mt-8 text-xl">
