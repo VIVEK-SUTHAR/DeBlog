@@ -6,8 +6,8 @@ contract DeBlog {
         uint256 blogId,
         address owner,
         string blogTitle,
-        string coverImage,
-        string blogCategory,
+        string subTitle,
+        string authorName,
         string blogContent,
         uint blogUploaded
     );
@@ -16,8 +16,8 @@ contract DeBlog {
         uint256 blogId;
         address blogOwner;
         string blogTitle;
-        string coverImage;
-        string blogCategory;
+        string subTitle;
+        string authorName;
         string blogContent;
         uint256 timestamp;
     }
@@ -37,8 +37,8 @@ contract DeBlog {
     function newBlog(
         uint256 blogId_,
         string memory blogTitle_,
-        string memory coverImage_,
-        string memory blogCategory_,
+        string memory subTitle_,
+        string memory authorName_,
         string memory blogContent_
     ) public payable {
         blogs.push(
@@ -46,8 +46,8 @@ contract DeBlog {
                 blogId_,
                 payable(msg.sender),
                 blogTitle_,
-                coverImage_,
-                blogCategory_,
+                subTitle_,
+                authorName_,
                 blogContent_,
                 block.timestamp
             )
@@ -57,8 +57,8 @@ contract DeBlog {
             blogId_,
             msg.sender,
             blogTitle_,
-            coverImage_,
-            blogCategory_,
+            subTitle_,
+            authorName_,
             blogContent_,
             block.timestamp
         );

@@ -21,7 +21,6 @@ function LoginPage() {
                 state.setCurrentAccount(getAccount[0]);
                 setIsWalletConnected(true);
             }
-
         }
         catch (err) {
             console.log(err);
