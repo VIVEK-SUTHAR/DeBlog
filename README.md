@@ -6,9 +6,9 @@
 ## Features:
 - **Read All Blogs**
 - **Write Your own Blog**
+- **Tip To Writer Directly**
 - **Minial UI**
 - **NO Payment Just Pay Gas-fees**
-- **Tip To Writer Directly(Added but not tested)**
 - **Permanent Data Storage as Its on Block-chain**
 
 
