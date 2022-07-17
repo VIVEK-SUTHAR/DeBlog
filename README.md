@@ -83,5 +83,6 @@ If you have any feedback, please reach out to us at vivek@hackclubsvit.co or sah
 
 ![Landing Page](https://ipfs.filebase.io/ipfs/QmVrvkLehb5YB4FWgoWfbfqCRUfgT3uGq82wM7aSF9RmxU)
 ![Main Page](https://ipfs.filebase.io/ipfs/QmQCYkGwtCEPoiGGp16v6gMDZhn3nVsPd4LE8ABHzD8E82)
-![blog Page](https://ipfs.filebase.io/ipfs/QmQwV7ngvCP3ZpynTBdLc8TqqwHgMAmiPPdnfgs5Y2sTjd)
+![blog Page](https://ipfs.filebase.io/ipfs/QmVNaizuQo3hSEFqxwbHagMm9JsLgA3DMAtwqAPeQHx84U)
 ![Write blog](https://ipfs.filebase.io/ipfs/QmaUtWktT8WtVTmaNWjTN6i8fzjfdrxvaKYtyiXNMFb36E)
+![Tip The Writer](https://ipfs.filebase.io/ipfs/QmRTm6RjRaE6auDNumTQck7m9xpFzmes4q2d8VDFFk7vrd)
