@@ -6,7 +6,7 @@ export default function BlogCard() {
 
   return (
     <>
-      <div className='MusicCard w-4/5 h-72 bg-gradient-to-r from-sky-400 to-sky-300 flex flex-row items-center  justify-center rounded-xl p-4 overflow-hidden hover:bg-[hsla(0,0%,100%,.1)] hover:transition-all hover:delay-75'>
+      <div className='MusicCard w-full h-72 bg-gradient-to-r from-sky-400 to-sky-300 flex flex-row items-center  justify-center rounded-xl p-4 overflow-hidden hover:bg-[hsla(0,0%,100%,.1)] hover:transition-all hover:delay-75'>
         <div className='h-full pt-4 pr-8 text-black flex-1 flex flex-col justify-start items-start'>
           <div className="self-start text-4xl">Blog Title</div>
           <div className='text-2xl my-2'>Blog Catagory</div>

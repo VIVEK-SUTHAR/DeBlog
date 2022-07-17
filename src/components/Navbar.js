@@ -1,8 +1,11 @@
 import { Next, Previous } from "../Assets/Icons";
 import useStore from "../Store/store";
+import writeBlogs from "./WriteBlogs";
 export default function Navbar() {
   const store = useStore();
   const currentAccount = store.currentAccount.slice(38);
+  const setWriteBlog = store.setWriteBlog;
+  const writeBlog = store.writeBlog;
   // currentAccount.slice(38)
   return (
     <div className="bg-[#2a2a2a]  h-16 w-full px-8 stickey top-0 ">
@@ -32,7 +35,7 @@ export default function Navbar() {
             </a>
           </li>
           <li className="hover:text-white hover:scale-105 ">
-            <a href="/" className="  mr-8">
+            <a onClick={()=>{setWriteBlog(true);console.log(writeBlog)}} className="mr-8">
               <span className="pl-4 border-l-2 mx-4">Write your Blog</span>
             </a>
           </li>
