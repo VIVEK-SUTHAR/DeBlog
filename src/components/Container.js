@@ -11,6 +11,8 @@ function Container() {
     const store = useStore();
     const writeBlog = store.writeBlog;
     const setWriteBlog = store.setWriteBlog;
+    const setDetailBlogs = store.setDetailBlogs;
+    const detailBlogs = store.detailBlogs;
     let MusicList = [];
     for (let i = 0; i < 5; i++) {
         MusicList[i] = i + 10;
@@ -19,6 +21,9 @@ function Container() {
     const ABI = abi.abi;
     let AllBlogs = [];
     var blogs;
+    useEffect(()=>{
+        setDetailBlogs(allBlogs)
+    },[detailBlogs, allBlogs])
     const getAllBlogs = async () => {
         try {
             const { ethereum } = window;
@@ -34,7 +39,17 @@ function Container() {
                 // console.log(typeof AllBlogs);
                 // console.log(AllBlogs);
                 // setAllBlogs(Object.entries(AllBlogs));
-                setAllBlogs(Object.values(AllBlogs))
+                setAllBlogs(Object.values(AllBlogs));
+                if (allBlogs){
+                    setDetailBlogs(allBlogs)
+                }
+                else{
+                    console.log("bdcgc")
+                }
+                // const d = allBlogs
+                // setDetailBlogs(d)
+                // console.log(d)
+
                 allBlogs.map(itm => {
                     console.log(itm.blogTitle);
                 })

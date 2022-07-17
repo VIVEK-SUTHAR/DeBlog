@@ -7,7 +7,8 @@ module.exports = {
     extend: {
       fontFamily: {
           'One': ['"Russo One"', 'cursive'],
-          'Two': ['Inter']
+          'Two': ['Inter'],
+          'Three': ['Padauk']
         },
     }
   },
