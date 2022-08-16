@@ -53,7 +53,7 @@ function WriteBlogs(props) {
           ABI,
           signer
         );
-        await DeBlog.newBlog(Math.round(Math.random() * 1000000), title, subTitle, authorName, content);
+        await DeBlog.newBlog(Math.round(Math.random() * 1000000), title, subTitle, authorName, content, URI);
         console.log("blog uploaded");
       }
     } catch (error) {
@@ -61,37 +61,36 @@ function WriteBlogs(props) {
     }
   }
   return (
-    <div ref={ref} className='absolute top-10 left-10 font-9xl rounded-xl w-4/5 h-screen bg-white'>
-      <div className='flex justify-between'>
-        <img src={logo} className='w-1/5 -mt-16' alt="" />
-        <div className='mt-4 h-fit items-center flex'>
+    <div ref={ref} className='absolute top-10 left-40 font-9xl rounded-xl w-4/6 h-auto bg-white shadow-xl'>
+      <div className='flex justify-between px-12 py-4'>
+        <div className='mt-4 h-fit items-center flex justify-between w-full'>
+          <img src="https://images.unsplash.com/photo-1511367461989-f85a21fda167?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2831&q=80" className='rounded-full h-14 w-14 mr-4 object-cover' alt="" />
           <button className='bg-green-500 rounded-xl h-fit mr-8 text-white font-semibold px-3 py-2'
             onClick={uploadNewBlog}
           >Publish</button>
-          <img src="https://miro.medium.com/fit/c/96/96/0*I2F8PIdog1pkSr8i.jpg" className='rounded-full h-14 w-14 mr-4' alt="" />
         </div>
       </div>
-      <div className='ml-12'>
+      <div className='px-12 w-full'>
         <div className='block mb-4'>
-          <label htmlFor="" className='block text-4xl text-[#413f3f] font-Two' placeholder='This is why Users dont like long Addresses'>Cover Image</label>
-          <input type="file" onChange={handleImage} className='border-black border-2 rounded-md w-4/5 h-12' />
-          <img src={localImageLink} />
+          <label htmlFor="" className='block text-2xl text-[#413f3f] font-Two mb-1' placeholder='This is why Users dont like long Addresses'>Cover Image</label>
+          <input type="file" onChange={handleImage} className='border-black border-2 rounded-md w-full h-12 p-2' />
+          <img src={localImageLink} className='w-3/5 mt-2 rounded-lg'/>
         </div>
         <div className='block mb-4'>
-          <label htmlFor="" className='block text-4xl text-[#413f3f] font-Two' placeholder='This is why Users dont like long Addresses'>Author</label>
-          <input type="text" onChange={event => setAuthorName(event.target.value)} className='border-black border-2 rounded-md w-4/5 h-12' />
+          <label htmlFor="" className='block text-2xl text-[#413f3f] font-Two mb-1' placeholder='This is why Users dont like long Addresses'>Author</label>
+          <input type="text" onChange={event => setAuthorName(event.target.value)} className='border-blue-500 border-2 rounded-md w-full h-12 p-2' />
         </div>
         <div className='block mb-4'>
-          <label htmlFor="" className='block text-4xl text-[#413f3f] font-Two'>Title</label>
-          <input type="text" onChange={event => setTitle(event.target.value)} className='border-black border-2 rounded-md w-4/5 h-12' />
+          <label htmlFor="" className='block text-2xl text-[#413f3f] font-Two mb-1'>Title</label>
+          <input type="text" onChange={event => setTitle(event.target.value)} className='border-blue-500 border-2 rounded-md w-full h-12 p-2' />
         </div>
         <div className='block mb-4'>
-          <label htmlFor="" className='block text-4xl text-[#413f3f] font-Two'>Subtitle</label>
-          <input type="text" onChange={event => setSubTitle(event.target.value)} className='border-black border-2 rounded-md w-4/5 h-12' />
+          <label htmlFor="" className='block text-2xl text-[#413f3f] font-Two mb-1'>Subtitle</label>
+          <input type="text" onChange={event => setSubTitle(event.target.value)} className='border-blue-500 border-2 rounded-md w-full h-12 p-2' />
         </div>
         <div className='block mb-4'>
-          <label htmlFor="" className='block text-4xl text-[#413f3f] font-Two'>Content</label>
-          <textarea type="text" onChange={event => setContent(event.target.value)} className='border-black border-2 rounded-md w-4/5 h-48' />
+          <label htmlFor="" className='block text-2xl text-[#413f3f] font-Two mb-1'>Content</label>
+          <textarea type="text" onChange={event => setContent(event.target.value)} className='border-blue-500 border-2 rounded-md w-full h-48 p-2' />
         </div>
       </div>
     </div>

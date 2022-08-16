@@ -11,7 +11,10 @@ export default function BlogCard({ blogdata, index }) {
   const store = useStore();
   const currentAccount = store.currentAccount.slice(38);
   return (
-    <div className='MusicCard min-h-max shadow-xl flex flex-row items-center justify-center rounded-xl p-4 overflow-hidden hover:bg-[hsla(0,0%,100%,.1)] hover:transition-all hover:delay-7'>
+    <div className='min-h-max shadow-xl flex flex-col items-center justify-center rounded-xl p-4 overflow-hidden hover:bg-[hsla(0,0%,100%,.1)] hover:transition-all hover:delay-7'>
+      <div className="w-full">
+        <img src={blogdata.coverImage} className='h-36 w-full rounded-xl'/>
+      </div>
       <div className='h-full pt-4 pr-8 text-black flex-1 flex flex-col justify-start items-start'>
         <div className="self-start text-2xl font-medium">{blogdata.blogTitle}</div>
         <div className='text-lg my-2 font-Three'>{blogdata.subTitle}</div>
