@@ -54,14 +54,14 @@ function WriteBlogs(props) {
     }
   }
   return (
-    <div ref={ref} className='absolute top-10 font-9xl rounded-xl bg-[#ffffff] w-4/5 h-screen'>
+    <div ref={ref} className='absolute top-10 left-10 font-9xl rounded-xl w-4/5 h-screen bg-white'>
       <div className='flex justify-between'>
         <img src={logo} className='w-1/5 -mt-16' alt="" />
         <div className='mt-4 h-fit items-center flex'>
           <button className='bg-green-500 rounded-xl h-fit mr-8 text-white font-semibold px-3 py-2'
             onClick={uploadNewBlog}
           >Publish</button>
-          <img src="	https://miro.medium.com/fit/c/96/96/0*I2F8PIdog1pkSr8i.jpg" className='rounded-full h-14 w-14 mr-4' alt="" />
+          <img src="https://miro.medium.com/fit/c/96/96/0*I2F8PIdog1pkSr8i.jpg" className='rounded-full h-14 w-14 mr-4' alt="" />
         </div>
       </div>
       <div className='ml-12'>

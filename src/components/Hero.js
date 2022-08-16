@@ -27,11 +27,11 @@ const Hero = ({ connectWallet }) => {
                 <img className="absolute -top-20 left-0 w-1/6" src={logo} alt="" />
                 </div>
                 <ul className="flex flex-row items-end justify-end text-right transition-all ease-in-out duration-300 text-2xl">
-                    <li className="mx-12 my-2 hover:-translate-y-1  font-semibold " >Home</li>
-                    <li className="mx-6 my-2 hover:-translate-y-1 font-semibold" >About Us</li>
+                    <li className="mx-12 my-2 font-semibold cursor-pointer">Home</li>
+                    <li className="mx-6 my-2 font-semibold cursor-pointer">About Us</li>
                 </ul>
             </nav>
-            <main className="min-h-screen -mt-8 bg-gradient-to-b flex flex-col items-center justify-center overflow-hidden rounded-lg">
+            <main className="mt-36 bg-gradient-to-b flex flex-col items-center justify-center overflow-hidden rounded-lg">
                 <h2 className="font-Two text-8xl w-2/3 text-center">Your blogs go <span className="text-transparent bg-clip-text bg-gradient-to-r from-green-400 via-blue-500 to-purple-600">Decentralised</span></h2>
                 {/* <img src={logo} className='w-1/2 -mt-96' alt="" /> */}
 

@@ -19,10 +19,18 @@ function Container() {
     }
     const [allBlogs, setAllBlogs] = useState([])
     const ABI = abi.abi;
+<<<<<<< HEAD
     useEffect(() => {
         setDetailBlogs(allBlogs)
         getAllBlogs()
     }, [])
+=======
+    let AllBlogs = [];
+    var blogs;
+    useEffect(() => {
+        setDetailBlogs(allBlogs)
+    }, [detailBlogs, allBlogs])
+>>>>>>> 19d17e928e70f151473476ca00893cbc3055397f
     const getAllBlogs = async () => {
         try {
             const { ethereum } = window;
@@ -38,6 +46,7 @@ function Container() {
                 // console.log(typeof AllBlogs);
                 // console.log(AllBlogs);
                 // setAllBlogs(Object.entries(AllBlogs));
+<<<<<<< HEAD
                 // console.log(allBlogs);
                 console.log("Type of All Blogs is " + typeof AllBlogs);
                 // AllBlogs.map(it => {
@@ -52,6 +61,9 @@ function Container() {
                     console.log(it.blogOwner);
                 })
                 // setAllBlogs(Object.values(AllBlogs));
+=======
+                setAllBlogs(Object.values(AllBlogs));
+>>>>>>> 19d17e928e70f151473476ca00893cbc3055397f
                 if (allBlogs) {
                     setDetailBlogs(allBlogs)
                 }
@@ -66,10 +78,10 @@ function Container() {
     }
 
     return (
-        <div className='bg-[#121212] flex-1 overflow-y-scroll Scroll px-8 py-6 relative'>
-            <Catagories />
-            <div className="text-3xl mt-8 text-white">Recent Blogs</div><br />
-            <div className="w-4/5 flex flex-row flex-wrap min-h-screen justify-start items-center gap-10 overflow-y-scroll Scroll">
+        <div className='bg-white flex-1 overflow-y-scroll Scroll px-8 py-6 relative'>
+            {/* <Catagories /> */}
+            {/* <div className="text-3xl mt-8 text-white">Recent Blogs</div><br /> */}
+            <div className="w-full flex flex-row flex-wrap min-h-screen justify-start items-center gap-x-6 overflow-y-scroll Scroll">
                 {
                     allBlogs && allBlogs.map((item, index) => {
                         return <Link to={`/blog/${index}`}>
