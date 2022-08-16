@@ -21,9 +21,9 @@ function Container() {
     const ABI = abi.abi;
     let AllBlogs = [];
     var blogs;
-    useEffect(()=>{
+    useEffect(() => {
         setDetailBlogs(allBlogs)
-    },[detailBlogs, allBlogs])
+    }, [detailBlogs, allBlogs])
     const getAllBlogs = async () => {
         try {
             const { ethereum } = window;
@@ -40,10 +40,10 @@ function Container() {
                 // console.log(AllBlogs);
                 // setAllBlogs(Object.entries(AllBlogs));
                 setAllBlogs(Object.values(AllBlogs));
-                if (allBlogs){
+                if (allBlogs) {
                     setDetailBlogs(allBlogs)
                 }
-                else{
+                else {
                     console.log("bdcgc")
                 }
                 // const d = allBlogs
@@ -62,10 +62,10 @@ function Container() {
         getAllBlogs()
     }, [])
     return (
-        <div className='bg-[#121212] flex-1 overflow-y-scroll Scroll px-8 py-6 relative'>
-            <Catagories />
-            <div className="text-3xl mt-8 text-white">Recent Blogs</div><br />
-            <div className="w-4/5 flex flex-row flex-wrap min-h-screen justify-start items-center gap-10 overflow-y-scroll Scroll">
+        <div className='bg-white flex-1 overflow-y-scroll Scroll px-8 py-6 relative'>
+            {/* <Catagories /> */}
+            {/* <div className="text-3xl mt-8 text-white">Recent Blogs</div><br /> */}
+            <div className="w-full flex flex-row flex-wrap min-h-screen justify-start items-center gap-x-6 overflow-y-scroll Scroll">
                 {
                     allBlogs && allBlogs.map((item, index) => {
                         return <Link to={`/blog/${index}`}>
