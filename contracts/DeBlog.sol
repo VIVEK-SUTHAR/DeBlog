@@ -9,7 +9,8 @@ contract DeBlog {
         string subTitle,
         string authorName,
         string blogContent,
-        uint blogUploaded
+        uint blogUploaded,
+        string coverImage
     );
 
     struct Blog {
@@ -20,6 +21,7 @@ contract DeBlog {
         string authorName;
         string blogContent;
         uint256 timestamp;
+        string coverImage;
     }
 
     address payable owner;
@@ -39,7 +41,8 @@ contract DeBlog {
         string memory blogTitle_,
         string memory subTitle_,
         string memory authorName_,
-        string memory blogContent_
+        string memory blogContent_,
+        string memory coverImage_
     ) public payable {
         blogs.push(
             Blog(
@@ -49,7 +52,8 @@ contract DeBlog {
                 subTitle_,
                 authorName_,
                 blogContent_,
-                block.timestamp
+                block.timestamp,
+                coverImage_
             )
         );
 
@@ -60,7 +64,8 @@ contract DeBlog {
             subTitle_,
             authorName_,
             blogContent_,
-            block.timestamp
+            block.timestamp,
+            coverImage_
         );
     }
 

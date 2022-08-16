@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from 'react';
 import { Web3Storage } from "web3.storage";
 import logo from '../Assets/DeBlog-logos_black.png';
 import abi from "../utils/ABI.json";
+import storeFiles from '../utils/uploadImage';
 import { CONTRACT_ADDRESS } from "../utils/utils";
 function WriteBlogs(props) {
   const ref = useRef(null);
@@ -11,9 +12,8 @@ function WriteBlogs(props) {
   const [subTitle, setSubTitle] = useState('');
   const [content, setContent] = useState('');
   const [authorName, setAuthorName] = useState("");
-  const [cid, setCid] = useState("");
-  const [FilePathIPFS, setFilePathIPFS] = useState("")
-  const [fileName, setFileName] = useState("")
+  const [image, setImage] = useState(undefined);
+  const [localImageLink, setLocalImageLink] = useState("");
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (ref.current && !ref.current.contains(event.target)) {
@@ -30,12 +30,19 @@ function WriteBlogs(props) {
   }
   const ABI = abi.abi;
   const Token = process.env.TOKEN;
-  const uploadToIPFS = async (e) => {
+  const handleImage = (e) => {
     e.preventDefault();
-
+    if (e.target.files[0]) {
+      setImage(e.target.files[0]);
+      setLocalImageLink(URL.createObjectURL(e.target.files[0]));
+    }
   }
+
   const uploadNewBlog = async (e) => {
-    e.preventDefault()
+    const URI=await storeFiles(image);
+    console.log(URI);
+
+    e.preventDefault();
     try {
       const { ethereum } = window;
       if (ethereum) {
@@ -65,6 +72,11 @@ function WriteBlogs(props) {
         </div>
       </div>
       <div className='ml-12'>
+        <div className='block mb-4'>
+          <label htmlFor="" className='block text-4xl text-[#413f3f] font-Two' placeholder='This is why Users dont like long Addresses'>Cover Image</label>
+          <input type="file" onChange={handleImage} className='border-black border-2 rounded-md w-4/5 h-12' />
+          <img src={localImageLink} />
+        </div>
         <div className='block mb-4'>
           <label htmlFor="" className='block text-4xl text-[#413f3f] font-Two' placeholder='This is why Users dont like long Addresses'>Author</label>
           <input type="text" onChange={event => setAuthorName(event.target.value)} className='border-black border-2 rounded-md w-4/5 h-12' />
