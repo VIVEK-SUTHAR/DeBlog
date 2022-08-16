@@ -32,30 +32,12 @@ function WriteBlogs(props) {
   const Token = process.env.TOKEN;
   const uploadToIPFS = async (e) => {
     e.preventDefault();
-    const Storage = new Web3Storage({ token: Token });
-    const dta = {
-      content: content
-    }
-    const blob = new Blob([JSON.stringify(dta)], { type: 'application/text/json' })
-    const files = [new File([blob], `DeBlog+${title}`)]
-    console.log(files);
-    const cid = await Storage.put([files[0]]);
-    console.log(cid);
-    setCid(cid)
-    const res = await Storage.get(cid);
-    const resFile = await res.files()
-    for (const file of resFile) {
-      console.log(file.name);
-      setFilePathIPFS("https://" + cid + ".ipfs.dweb.link/" + file.name)
-      setFileName(file.name);
-      console.log(`${file.cid} -- ${file.path} -- ${file.size}`)
-    }
+
   }
   const uploadNewBlog = async (e) => {
     e.preventDefault()
     try {
       const { ethereum } = window;
-
       if (ethereum) {
         const provider = new ethers.providers.Web3Provider(ethereum, "any");
         const signer = provider.getSigner();

@@ -19,11 +19,10 @@ function Container() {
     }
     const [allBlogs, setAllBlogs] = useState([])
     const ABI = abi.abi;
-    let AllBlogs = [];
-    var blogs;
-    useEffect(()=>{
+    useEffect(() => {
         setDetailBlogs(allBlogs)
-    },[detailBlogs, allBlogs])
+        getAllBlogs()
+    }, [])
     const getAllBlogs = async () => {
         try {
             const { ethereum } = window;
@@ -35,32 +34,37 @@ function Container() {
                     ABI,
                     signer
                 );
-                AllBlogs = await DeBlog.getAllblogs();
+                const AllBlogs = await DeBlog.getAllblogs();
                 // console.log(typeof AllBlogs);
                 // console.log(AllBlogs);
                 // setAllBlogs(Object.entries(AllBlogs));
-                setAllBlogs(Object.values(AllBlogs));
-                if (allBlogs){
+                // console.log(allBlogs);
+                console.log("Type of All Blogs is " + typeof AllBlogs);
+                // AllBlogs.map(it => {
+                //     console.log(it.blogOwner);
+                //     console.log(it.blogContent);
+                //     console.log(it.authorName);
+                // })
+                setAllBlogs(AllBlogs);
+                console.log(AllBlogs);
+                AllBlogs.map(it => {
+
+                    console.log(it.blogOwner);
+                })
+                // setAllBlogs(Object.values(AllBlogs));
+                if (allBlogs) {
                     setDetailBlogs(allBlogs)
                 }
-                else{
+                else {
                     console.log("bdcgc")
                 }
-                // const d = allBlogs
-                // setDetailBlogs(d)
-                // console.log(d)
 
-                allBlogs.map(itm => {
-                    console.log(itm.blogTitle);
-                })
             }
         } catch (error) {
             console.log(error);
         }
     }
-    useEffect(() => {
-        getAllBlogs()
-    }, [])
+
     return (
         <div className='bg-[#121212] flex-1 overflow-y-scroll Scroll px-8 py-6 relative'>
             <Catagories />
