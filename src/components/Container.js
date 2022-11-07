@@ -5,7 +5,6 @@ import BlogCard from "../components/BlogCard";
 import useStore from "../Store/store";
 import abi from "../utils/ABI.json";
 import { CONTRACT_ADDRESS } from "../utils/utils";
-import Catagories from "./Catagories";
 import WriteBlogs from "./WriteBlogs";
 function Container() {
     const store = useStore();
@@ -73,8 +72,6 @@ function Container() {
 
     return (
         <div className='bg-white flex-1 overflow-y-scroll Scroll px-8 py-6 relative'>
-            {/* <Catagories /> */}
-            {/* <div className="text-3xl mt-8 text-white">Recent Blogs</div><br /> */}
             <div className="w-full flex flex-row flex-wrap min-h-screen justify-center gap-x-6 overflow-y-scroll Scroll">
                 {
                     allBlogs && allBlogs.map((item, index) => {

@@ -1,7 +1,6 @@
-import { Next, Previous } from "../Assets/Icons";
 import useStore from "../Store/store";
-import writeBlogs from "./WriteBlogs";
 import logo from "../Assets/DeBlog-logos_black.png";
+import { Link } from "react-router-dom";
 
 export default function Navbar() {
   const store = useStore();
@@ -11,33 +10,12 @@ export default function Navbar() {
   return (
     <div className="bg-white h-16 w-full px-8 sticky top-0 shadow-lg shadow-indigo-500/40">
       <div className="flex items-center justify-between h-full text-neutral-400 text-base font-medium">
-        {/* <ul className="flex">
-          <li>
-            <Previous />
-          </li>
-          <li className="ml-5">
-            <Next />
-          </li>
-        </ul> */}
-        <div>
-          <img src={logo} alt="DeBlog" className="h-44 w-auto" />
-        </div>
+        <Link to={'/'}>
+          <div>
+            <img src={logo} alt="DeBlog" className="h-44 w-auto" />
+          </div>
+        </Link>
         <ul className="flex items-center">
-          {/* <li className=" hover:text-white hover:scale-105">
-            <a href="/" className=" ">
-              <span className="mx-4">Premium</span>
-            </a>
-          </li>
-          <li className=" hover:text-white hover:scale-105">
-            <a href="/" className=" ">
-              <span className="mx-4">Support</span>
-            </a>
-          </li>
-          <li className=" hover:text-white hover:scale-105">
-            <a href="/" className=" ">
-              <span className="mx-4"></span>
-            </a>
-          </li> */}
           <li className="text-gray-700">
             <a onClick={() => { setWriteBlog(true) }} className="mr-8">
               <span className="pl-4 mx-4 cursor-pointer">Write your Blog</span>
