@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 export default function Navbar() {
   const store = useStore();
-  const currentAccount = store.currentAccount.slice(38);
+  const currentAccount = store.currentAccount;
   const setWriteBlog = store.setWriteBlog;
   const writeBlog = store.writeBlog;
   return (

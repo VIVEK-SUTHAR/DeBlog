@@ -16,55 +16,33 @@ function Container() {
     for (let i = 0; i < 5; i++) {
         MusicList[i] = i + 10;
     }
-    const [allBlogs, setAllBlogs] = useState([])
     const ABI = abi.abi;
+
     useEffect(() => {
-        setDetailBlogs(allBlogs)
         getAllBlogs()
-    }, [])
-    let AllBlogs = [];
-    var blogs;
-    useEffect(() => {
-        setDetailBlogs(allBlogs)
-    }, [detailBlogs, allBlogs])
+    }, [detailBlogs])
     const getAllBlogs = async () => {
         try {
             const { ethereum } = window;
-            if (ethereum) {
-                const provider = new ethers.providers.Web3Provider(ethereum, "any");
-                const signer = provider.getSigner();
-                const DeBlog = new ethers.Contract(
-                    CONTRACT_ADDRESS,
-                    ABI,
-                    signer
-                );
-                const AllBlogs = await DeBlog.getAllblogs();
-                // console.log(typeof AllBlogs);
-                // console.log(AllBlogs);
-                // setAllBlogs(Object.entries(AllBlogs));
-                // console.log(allBlogs);
-                console.log("Type of All Blogs is " + typeof AllBlogs);
-                // AllBlogs.map(it => {
-                //     console.log(it.blogOwner);
-                //     console.log(it.blogContent);
-                //     console.log(it.authorName);
-                // })
-                setAllBlogs(AllBlogs);
-                console.log(AllBlogs);
-                AllBlogs.map(it => {
-
-                    console.log(it.blogOwner);
-                })
-                // setAllBlogs(Object.values(AllBlogs));
-                setAllBlogs(Object.values(AllBlogs));
-                if (allBlogs) {
-                    setDetailBlogs(allBlogs)
-                }
-                else {
-                    console.log("bdcgc")
-                }
-
+            if (detailBlogs){
+                console.log('no worrries')
             }
+            else{
+                if (ethereum) {
+                    const provider = new ethers.providers.Web3Provider(ethereum, "any");
+                    const signer = provider.getSigner();
+                    const DeBlog = new ethers.Contract(
+                        CONTRACT_ADDRESS,
+                        ABI,
+                        signer
+                    );
+                    const AllBlogs = await DeBlog.getAllblogs();
+                    console.log("Type of All Blogs is " + typeof AllBlogs);
+                    setDetailBlogs(Object.values(AllBlogs));
+    
+                }
+            }
+            
         } catch (error) {
             console.log(error);
         }
@@ -74,7 +52,7 @@ function Container() {
         <div className='bg-white flex-1 overflow-y-scroll Scroll px-8 py-6 relative'>
             <div className="w-full flex flex-row flex-wrap min-h-screen justify-center gap-x-6 overflow-y-scroll Scroll">
                 {
-                    allBlogs && allBlogs.map((item, index) => {
+                    detailBlogs && detailBlogs.map((item, index) => {
                         return <Link to={`/blog/${index}`}>
                             <BlogCard key={index} index={index} blogdata={item} />
                         </Link>
