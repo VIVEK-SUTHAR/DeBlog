@@ -54,13 +54,13 @@ const BlogPage = () => {
     if (detailBlogs != '') {
         return (
             <>
-                <div className="hidden confetiScren fixed h-48 w-2/5  my-96 rounded-xl p-10 text-5xl text-center bg-slate-300">
+                {/* <div className="hidden confetiScren fixed h-48 w-2/5  my-96 rounded-xl p-10 text-5xl text-center bg-slate-300">
                     Thanks For Your Tip
-                </div>
+                </div> */}
                 <div className="bg-[#ffffff] w-screen flex-1 overflow-y-scroll Scroll px-10">
-                    <div className="flex justify-between">
-                    <button className="bg-red-100 px-4 py-2 rounded-lg mt-2 " onClick={() => window.history.back()}>Go Back</button>
-                    <button className="bg-red-100 px-4 py-2 rounded-lg mt-2 " onClick={sendTip}>Tip The Writer</button>
+                    <div className="flex justify-between mt-6">
+                        <button className="bg-orange-400 text-xl px-4 py-2 rounded-xl mt-2 text-white font-bold" onClick={() => window.history.back()}>Go Back</button>
+                        <button className="bg-orange-400 text-xl px-4 py-2 rounded-xl mt-2 text-white font-bold" onClick={sendTip}>💰 Tip Writer</button>
                     </div>
                     <ProfileBar detailBlogs={detailBlogs} id={id} />
                     <div className="mt-8">

@@ -8,7 +8,7 @@ export default function Navbar() {
   const setWriteBlog = store.setWriteBlog;
   const writeBlog = store.writeBlog;  
   return (
-    <div className="bg-white h-16 w-full px-8 sticky top-0 shadow-lg shadow-indigo-500/40">
+    <div className="bg-white h-20 w-full px-8 sticky top-0 shadow-lg shadow-indigo-500/40">
       <div className="flex items-center justify-between h-full text-neutral-400 text-base font-medium">
         <Link to={'/'}>
           <div>

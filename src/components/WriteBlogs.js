@@ -85,32 +85,36 @@ function WriteBlogs(props) {
         draggable
         pauseOnHover
       />
-      <div ref={ref} className='absolute top-10 left-40 font-9xl rounded-xl w-4/6 h-auto bg-white shadow-xl'>
+      <div ref={ref} className='absolute top-10 left-56 font-9xl rounded-xl w-4/6 h-auto bg-white shadow-2xl py-4'>
         <div className='flex justify-between px-12 py-4'>
-          <div className='mt-4 h-fit items-center flex justify-between w-full'>
-            <img src="https://images.unsplash.com/photo-1511367461989-f85a21fda167?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2831&q=80" className='rounded-full h-14 w-14 mr-4 object-cover' alt="" />
-            <button className='bg-green-500 rounded-xl h-fit mr-8 text-white font-semibold px-3 py-2'
+          <div className='h-fit items-center flex justify-between w-full'>
+            <img src="https://miro.medium.com/fit/c/96/96/0*I2F8PIdog1pkSr8i.jpg" className='rounded-full h-14 w-14 mr-4 object-cover' alt="" />
+            <button className='bg-orange-400 rounded-xl h-fit mr-8 text-white font-semibold px-3 py-2'
               onClick={uploadNewBlog}
             >Publish</button>
           </div>
         </div>
         <div className='px-12 w-full'>
-          <div className='block mb-4'>
-            <label htmlFor="" className='block text-2xl text-[#413f3f] font-Two mb-1' placeholder='This is why Users dont like long Addresses'>Cover Image</label>
-            <input type="file" onChange={handleImage} className='border-orange-400 border-2 rounded-md w-full h-12 p-2' />
-            <img src={localImageLink} className='w-3/5 mt-2 rounded-lg' />
+          <div className='flex justify-between'>
+            <div className='block mb-4'>
+              <label htmlFor="" className='block text-2xl text-[#413f3f] font-Two mb-1' placeholder='This is why Users dont like long Addresses'>Cover Image</label>
+              <input type="file" onChange={handleImage} className='border-orange-400 border-2 rounded-md w-96 h-12 p-2' />
+              <img src={localImageLink} className='w-3/5 mt-2 rounded-lg' />
+            </div>
+            <div className='block mb-4'>
+              <label htmlFor="" className='block text-2xl text-[#413f3f] font-Two mb-1' placeholder='This is why Users dont like long Addresses'>Author</label>
+              <input type="text" onChange={event => setAuthorName(event.target.value)} className='border-orange-400 border-2 rounded-md w-96 h-12 p-2' />
+            </div>
           </div>
-          <div className='block mb-4'>
-            <label htmlFor="" className='block text-2xl text-[#413f3f] font-Two mb-1' placeholder='This is why Users dont like long Addresses'>Author</label>
-            <input type="text" onChange={event => setAuthorName(event.target.value)} className='border-orange-400 border-2 rounded-md w-full h-12 p-2' />
-          </div>
-          <div className='block mb-4'>
-            <label htmlFor="" className='block text-2xl text-[#413f3f] font-Two mb-1'>Title</label>
-            <input type="text" onChange={event => setTitle(event.target.value)} className='border-orange-400 border-2 rounded-md w-full h-12 p-2' />
-          </div>
-          <div className='block mb-4'>
-            <label htmlFor="" className='block text-2xl text-[#413f3f] font-Two mb-1'>Subtitle</label>
-            <input type="text" onChange={event => setSubTitle(event.target.value)} className='border-orange-400 border-2 rounded-md w-full h-12 p-2' />
+          <div className='flex justify-between'>
+            <div className='block mb-4'>
+              <label htmlFor="" className='block text-2xl text-[#413f3f] font-Two mb-1'>Title</label>
+              <input type="text" onChange={event => setTitle(event.target.value)} className='border-orange-400 border-2 rounded-md w-96 h-12 p-2' />
+            </div>
+            <div className='block mb-4'>
+              <label htmlFor="" className='block text-2xl text-[#413f3f] font-Two mb-1'>Subtitle</label>
+              <input type="text" onChange={event => setSubTitle(event.target.value)} className='border-orange-400 border-2 rounded-md w-96 h-12 p-2' />
+            </div>
           </div>
           <div className='block mb-4'>
             <label htmlFor="" className='block text-2xl text-[#413f3f] font-Two mb-1'>Content</label>

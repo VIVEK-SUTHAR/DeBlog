@@ -26,7 +26,7 @@ const Hero = ({ connectWallet }) => {
                 <div className="left-0">
                 <img className="absolute -top-20 left-0 w-1/6" src={logo} alt="" />
                 </div>
-                <ul className="flex flex-row items-end justify-end text-right transition-all ease-in-out duration-300 text-2xl">
+                <ul className="flex flex-row items-end justify-end text-right transition-all ease-in-out duration-300 text-2xl text-orange-400">
                     <li className="mx-12 my-2 font-semibold cursor-pointer">Home</li>
                     <li className="mx-6 my-2 font-semibold cursor-pointer">About Us</li>
                 </ul>
