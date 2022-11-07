@@ -97,24 +97,24 @@ function WriteBlogs(props) {
         <div className='px-12 w-full'>
           <div className='block mb-4'>
             <label htmlFor="" className='block text-2xl text-[#413f3f] font-Two mb-1' placeholder='This is why Users dont like long Addresses'>Cover Image</label>
-            <input type="file" onChange={handleImage} className='border-black border-2 rounded-md w-full h-12 p-2' />
+            <input type="file" onChange={handleImage} className='border-orange-400 border-2 rounded-md w-full h-12 p-2' />
             <img src={localImageLink} className='w-3/5 mt-2 rounded-lg' />
           </div>
           <div className='block mb-4'>
             <label htmlFor="" className='block text-2xl text-[#413f3f] font-Two mb-1' placeholder='This is why Users dont like long Addresses'>Author</label>
-            <input type="text" onChange={event => setAuthorName(event.target.value)} className='border-blue-500 border-2 rounded-md w-full h-12 p-2' />
+            <input type="text" onChange={event => setAuthorName(event.target.value)} className='border-orange-400 border-2 rounded-md w-full h-12 p-2' />
           </div>
           <div className='block mb-4'>
             <label htmlFor="" className='block text-2xl text-[#413f3f] font-Two mb-1'>Title</label>
-            <input type="text" onChange={event => setTitle(event.target.value)} className='border-blue-500 border-2 rounded-md w-full h-12 p-2' />
+            <input type="text" onChange={event => setTitle(event.target.value)} className='border-orange-400 border-2 rounded-md w-full h-12 p-2' />
           </div>
           <div className='block mb-4'>
             <label htmlFor="" className='block text-2xl text-[#413f3f] font-Two mb-1'>Subtitle</label>
-            <input type="text" onChange={event => setSubTitle(event.target.value)} className='border-blue-500 border-2 rounded-md w-full h-12 p-2' />
+            <input type="text" onChange={event => setSubTitle(event.target.value)} className='border-orange-400 border-2 rounded-md w-full h-12 p-2' />
           </div>
           <div className='block mb-4'>
             <label htmlFor="" className='block text-2xl text-[#413f3f] font-Two mb-1'>Content</label>
-            <textarea type="text" onChange={event => setContent(event.target.value)} className='border-blue-500 border-2 rounded-md w-full h-48 p-2' />
+            <textarea type="text" onChange={event => setContent(event.target.value)} className='border-orange-400 border-2 rounded-md w-full h-48 p-2' />
           </div>
         </div>
       </div>

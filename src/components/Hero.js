@@ -1,24 +1,24 @@
 import { useEffect } from "react";
 import logo from "../Assets/DeBlog-logos_black.png";
 const Hero = ({ connectWallet }) => {
-    useEffect(() => {
-        window.addEventListener("scroll", () => {
-            window.scrollY > 120 ? addBorder() : removeBorder();
-        })
-    })
+    // useEffect(() => {
+    //     window.addEventListener("scroll", () => {
+    //         window.scrollY > 120 ? addBorder() : removeBorder();
+    //     })
+    // })
 
-    const addBorder = () => {
-        document.getElementById('nav').classList.add('border-b-2')
-        document.getElementById('nav').classList.add('border-green-400')
-        document.getElementById('nav').classList.add('glass-strong')
+    // const addBorder = () => {
+    //     document.getElementById('nav').classList.add('border-b-2')
+    //     document.getElementById('nav').classList.add('border-green-400')
+    //     document.getElementById('nav').classList.add('glass-strong')
 
-    }
-    const removeBorder = () => {
-        document.getElementById('nav').classList.remove('border-b-2')
-        document.getElementById('nav').classList.remove('border-green-400')
-        document.getElementById('nav').classList.remove('glass-strong')
+    // }
+    // const removeBorder = () => {
+    //     document.getElementById('nav').classList.remove('border-b-2')
+    //     document.getElementById('nav').classList.remove('border-green-400')
+    //     document.getElementById('nav').classList.remove('glass-strong')
 
-    }
+    // }
     return (
         <div className="min-h-screen glass min-w-full">
             <nav id="nav" className="flex flex-row justify-between sticky top-0 p-5">
