@@ -15,12 +15,10 @@ export default function Navbar() {
             <img src={logo} alt="DeBlog" className="h-44 w-auto" />
           </div>
         </Link>
-        <ul className="flex items-center">
-          <li className="text-gray-700">
-            <a onClick={() => { setWriteBlog(true) }} className="mr-8">
-              <span className="pl-4 mx-4 cursor-pointer">Write your Blog</span>
-            </a>
-          </li>
+        <div className="flex items-center justify-between">
+            <button onClick={() => { setWriteBlog(true) }} className="rounded-full bg-orange-400 hover:scale-105 px-4 py-3 text-white mr-4">
+              <span className="text-lg mx-4 cursor-pointer">Write your Blog</span>
+            </button>
           <button className="rounded-full bg-slate-200 hover:scale-105 px-8 py-3 text-black">
             💳{" "}
             {currentAccount
@@ -29,7 +27,7 @@ export default function Navbar() {
               currentAccount.slice(currentAccount.length - 4, currentAccount.length)
               : "Connect"}
           </button>
-        </ul>
+        </div>
       </div>
     </div>
   );

@@ -66,7 +66,7 @@ const BlogPage = () => {
                     <div className="mt-8">
                         <h2 className="text-6xl font-bold">{detailBlogs[id].blogTitle}</h2>
                         <h3 className="text-4xl mt-8 font-semibold text-[#757575]">{detailBlogs[id].subTitle}</h3>
-                        <img src={detailBlogs[id].coverImage} className="mt-12 w-screen h-auto" alt="body-img" />
+                        <img src={detailBlogs[id].coverImage} className="mt-12 w-screen h-[30rem] rounded-xl" alt="body-img" />
                         <div className="mt-8 text-xl">
                             <p>{detailBlogs[id].blogContent}</p>
                         </div>
