@@ -8,7 +8,9 @@ module.exports = {
       fontFamily: {
           'One': ['"Russo One"', 'cursive'],
           'Two': ['Inter'],
-          'Three': ['Padauk']
+          'Three': ['Padauk'],
+          'Four': ['Montserrat'],
+          'Five': ['Source Sans Pro']
         },
     }
   },

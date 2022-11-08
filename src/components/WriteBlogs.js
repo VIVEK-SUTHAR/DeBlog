@@ -1,9 +1,8 @@
 import { ethers } from 'ethers';
 import { useEffect, useRef, useState } from 'react';
-import { Web3Storage } from "web3.storage";
-import logo from '../Assets/DeBlog-logos_black.png';
 import abi from "../utils/ABI.json";
 import storeFiles from '../utils/uploadImage';
+import back from '../Assets/back.svg'
 import { CONTRACT_ADDRESS } from "../utils/utils";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -88,10 +87,14 @@ function WriteBlogs(props) {
       <div ref={ref} className='absolute top-10 left-56 font-9xl rounded-xl w-4/6 h-auto bg-white shadow-2xl py-4'>
         <div className='flex justify-between px-12 py-4'>
           <div className='h-fit items-center flex justify-between w-full'>
-            <img src="https://miro.medium.com/fit/c/96/96/0*I2F8PIdog1pkSr8i.jpg" className='rounded-full h-14 w-14 mr-4 object-cover' alt="" />
-            <button className='bg-orange-400 rounded-xl h-fit mr-8 text-white font-semibold px-3 py-2'
+          <img src={back} className='h-8 w-8' onClick={()=>onClickOutside && onClickOutside()} />
+            <div className='flex items-center'>
+            <button className='bg-orange-400 rounded-xl h-fit mr-8 text-white font-semibold px-3 py-2 text-xl'
               onClick={uploadNewBlog}
             >Publish</button>
+            <img src="https://miro.medium.com/fit/c/96/96/0*I2F8PIdog1pkSr8i.jpg" className='rounded-full h-14 w-14 object-cover' alt="" />
+            
+            </div>
           </div>
         </div>
         <div className='px-12 w-full'>

@@ -16,8 +16,8 @@ export default function BlogCard({ blogdata, index }) {
         <img src={blogdata.coverImage} className='h-36 w-full rounded-xl'/>
       </div>
       <div className='h-full pt-4 pr-8 text-black flex-1 flex flex-col justify-start items-start'>
-        <div className="self-start text-2xl font-medium">{blogdata.blogTitle}</div>
-        <div className='text-lg my-2 font-Three'>{blogdata.subTitle}</div>
+        <div className="self-start text-2xl font-bold font-Four">{blogdata.blogTitle}</div>
+        <div className='w-full h-full text-lg my-2 font-Five font-semibold overflow-hidden whitespace-nowrap text-ellipsis'>{blogdata.subTitle}</div>
         <h4 className='text-xl text-[#4b4b4b]' >By {blogdata.blogOwner.slice(0, 4) + "..." + blogdata.blogOwner.slice(blogdata.blogOwner.length - 4, blogdata.blogOwner.length)}
         </h4>
       </div>

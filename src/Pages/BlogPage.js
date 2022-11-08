@@ -5,6 +5,7 @@ import ProfileBar from "../components/ProfileBar";
 import useStore from "../Store/store";
 import abi from "../utils/ABI.json";
 import { CONTRACT_ADDRESS } from "../utils/utils";
+import back from '../Assets/back.svg'
 import blogImg from "../Assets/blogBanner.jpg"
 const BlogPage = () => {
     const store = useStore();
@@ -58,14 +59,14 @@ const BlogPage = () => {
                     Thanks For Your Tip
                 </div> */}
                 <div className="bg-[#ffffff] w-screen flex-1 overflow-y-scroll Scroll px-10">
-                    <div className="flex justify-between mt-6">
-                        <button className="bg-orange-400 text-xl px-4 py-2 rounded-xl mt-2 text-white font-bold" onClick={() => window.history.back()}>Go Back</button>
+                    <div className="flex justify-between mt-6 items-center">
+                    <img src={back} className='h-8 w-8' onClick={()=>window.history.back()} />
                         <button className="bg-orange-400 text-xl px-4 py-2 rounded-xl mt-2 text-white font-bold" onClick={sendTip}>💰 Tip Writer</button>
                     </div>
                     <ProfileBar detailBlogs={detailBlogs} id={id} />
                     <div className="mt-8">
-                        <h2 className="text-6xl font-bold">{detailBlogs[id].blogTitle}</h2>
-                        <h3 className="text-4xl mt-8 font-semibold text-[#757575]">{detailBlogs[id].subTitle}</h3>
+                        <h2 className="text-6xl font-bold font-Four">{detailBlogs[id].blogTitle}</h2>
+                        <h3 className="text-4xl mt-8 font-semibold text-[#757575] font-Five">{detailBlogs[id].subTitle}</h3>
                         <img src={detailBlogs[id].coverImage} className="mt-12 w-screen h-[30rem] rounded-xl" alt="body-img" />
                         <div className="mt-8 text-xl">
                             <p>{detailBlogs[id].blogContent}</p>
