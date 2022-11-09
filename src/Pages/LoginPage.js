@@ -4,7 +4,6 @@ import useStore from "../Store/store";
 import Layout from "./Layout";
 function LoginPage() {
     const [isWalletConnected, setIsWalletConnected] = useState(false);
-    const [currentAccount, setCurrentAccount] = useState('');
     const state = useStore();
 
     const connectWallet = async () => {
@@ -17,7 +16,6 @@ function LoginPage() {
                 const getAccount = await ethereum.request({
                     method: 'eth_requestAccounts'
                 });
-                setCurrentAccount(getAccount[0]);
                 state.setCurrentAccount(getAccount[0]);
                 setIsWalletConnected(true);
             }

@@ -1,5 +1,3 @@
-import { useEffect, useState } from "react";
-import getAllBlogs from "../utils/getAllBlogs";
 import Container from "./Container";
 import Navbar from "./Navbar";
 export default function Dashboard() {

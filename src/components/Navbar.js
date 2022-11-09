@@ -6,7 +6,7 @@ export default function Navbar() {
   const store = useStore();
   const currentAccount = store.currentAccount;
   const setWriteBlog = store.setWriteBlog;
-  const writeBlog = store.writeBlog;  
+
   return (
     <div className="bg-white h-20 w-full px-8 sticky top-0 shadow-lg shadow-indigo-500/40">
       <div className="flex items-center justify-between h-full text-neutral-400 text-base font-medium">
@@ -20,7 +20,6 @@ export default function Navbar() {
               <span className="text-lg mx-4 cursor-pointer">Write your Blog</span>
             </button>
           <button className="rounded-full bg-slate-200 hover:scale-105 px-8 py-3 text-black">
-            💳{" "}
             {currentAccount
               ? currentAccount.slice(0, 4) +
               "..." +
