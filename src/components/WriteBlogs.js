@@ -105,7 +105,9 @@ function WriteBlogs(props) {
             <div className='block mb-4'>
               <label htmlFor="" className='block text-xl text-[#413f3f] font-Four font-semibold mb-1' placeholder='This is why Users dont like long Addresses'>Cover Image</label>
               <input type="file" onChange={handleImage} className='border-black border-[px] rounded-lg w-96 h-12 p-2 bg-[#f7f7f7]' />
-              <img src={localImageLink} alt='banner' className='w-3/5 mt-2 rounded-lg' />
+              {
+                localImageLink?<img src={localImageLink} alt='banner' className='w-3/5 mt-2 rounded-lg' />:null
+              }
             </div>
             <div className='block mb-4'>
               <label htmlFor="" className='block text-xl text-[#413f3f] font-Four font-semibold mb-1' placeholder='This is why Users dont like long Addresses'>Author</label>

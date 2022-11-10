@@ -39,8 +39,8 @@ function Container() {
     }
 
     return (
-        <div className='bg-white flex-1 overflow-y-scroll Scroll px-8 py-6 relative mx-auto'>
-            <div className="w-full flex flex-row flex-wrap min-h-screen mx-auto justify-between gap-x-6 overflow-y-scroll Scroll">
+        <div className='bg-white flex-1 overflow-y-scroll Scroll px-8 py-6 relative'>
+            <div className="w-full flex flex-row flex-wrap min-h-screen justify-center gap-x-6 overflow-y-scroll Scroll">
                 {
                     detailBlogs && detailBlogs.map((item, index) => {
                         return <Link to={`/blog/${index}`}>
